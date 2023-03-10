@@ -1,0 +1,36 @@
+@import "projects-styling";
+.project-thumbnails-container, .project-thumbnail {
+  // transition: all $animation-time ease-in-out;  //change accordingly to other scss files' transition
+}
+
+.project-thumbnail {
+}
+
+.project-thumbnails-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr) );
+  grid-auto-flow: none;
+
+  > .project-thumbnail {
+    min-height: 11em;
+  }
+}
+
+.project-thumbnails-container-reel {
+  display: grid;
+  grid-auto-flow : column;
+  overflow-x : scroll;
+  height: 100%;
+
+  > .project-thumbnail {
+    width: 15em;
+  }
+
+}
+
+
+.project-thumbnail-image {
+  height: 50%;
+  background-color:$blau;
+  // max-width: 100%;
+}

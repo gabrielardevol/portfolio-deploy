@@ -1,0 +1,21 @@
+
+.row {
+  display: flex; /* set the container to use flex layout */
+  align-items: center;
+}
+
+#row3, #row4 {
+  justify-content: flex-end;
+}
+
+.character-container {
+  font-size: 25px;
+  transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+ border-radius: 50px;
+
+//width: 50px;
+//height: 50px;
+display: flex;       /* vertical align */
+align-items: center; /* vertical align */
+justify-content: center;
+}

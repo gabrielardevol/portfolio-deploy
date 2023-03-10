@@ -1,0 +1,37 @@
+.social-media-logo {
+  height: 2.5em;
+  min-width: 2.5em;
+  max-width: 2.5em;
+
+  margin: 1%;
+
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+/*   background-image: url('./images/me.png');
+ */}
+
+#contact {
+  overflow: hidden;
+}
+
+.contact-info {
+  background-color: white;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid black;
+  background-color: white;
+}
+
+.me-pic {
+  background-image: url('./images/me.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 3px 2px $vermell;
+  border: 1px solid $vermell
+}

@@ -1,0 +1,36 @@
+.skills-table {
+  width: 100%;
+  height: 100%;
+
+  * {
+    font-size: small;
+  }
+
+  th {
+    text-align: center;
+  background-color: $verd;
+  }
+
+  td {
+    background-color: white;
+  }
+  table, td {
+    width: inherit;
+    text-align: center;
+    border-bottom:1px solid black;
+    border-collapse: collapse;
+  }
+}
+
+.skills-card {
+  ::-webkit-scrollbar-track {
+    background-color: $verd;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-color: $verd;
+  }
+
+  .card-second-column {
+    overflow-y: auto;
+  }
+}

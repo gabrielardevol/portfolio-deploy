@@ -1,0 +1,113 @@
+$second-column-border: 1px solid black;
+@import "projects";
+
+
+.projects-card > h2 {
+  color: $blau;
+}
+
+
+.skills-card > h2 {
+  color: $verd;
+}
+
+.about-me-card > h2 {
+  color: $groc;
+}
+
+
+.contact-card > h2 {
+  color: $vermell;
+}
+
+.layout {
+  width: 100vw;
+  display: flex;
+}
+
+.layout, .cards {
+  background-color: $background-color
+}
+
+.cards, .show-layout, .show-layout-phone {
+  transition: all $animation-time ease-in-out;
+}
+
+.card {
+  background-color: white;
+  border-radius: $pixels-value;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  overflow: hidden;
+  min-width: 2.3em;
+  min-height: 2.3em;
+}
+
+.card-second-column {
+ // border-left: $second-column-border;
+  border-radius: 0px $pixels-value $pixels-value 0px;
+  min-width: 0px;
+  overflow: hidden;
+  background-color: rgb(181, 181, 181);
+
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+  border-radius: 0 $pixels-value $pixels-value 0;
+}
+
+
+// .card-second-column::-webkit-scrollbar {
+//   display: none;
+// }
+
+
+
+@media only screen and (min-width: 450px) {
+.cards {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "first first second"
+    "fourth logo second"
+    "fourth third third"  ;
+  gap: $pixels-value;
+  padding: $pixels-value;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .cards {
+    width: auto;
+  }
+
+
+  .layout {
+    display: block;
+  }
+  .card{
+    display: block;
+    width: auto;
+    margin-bottom: $pixels-value;
+  }
+
+  .card-second-column {
+    border-left: none;
+    border-top: $second-column-border;
+    border-radius: 0px;
+
+  }
+
+  .cards {
+    height: auto;
+  }
+
+  .show-layout {
+    width: 100%;
+    background-color: green;
+  }
+}

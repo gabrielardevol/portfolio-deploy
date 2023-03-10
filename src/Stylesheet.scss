@@ -1,0 +1,108 @@
+
+
+$animation-time: 1s;
+$pixels-value: 10px;
+$background-color: whitesmoke;
+$blau: rgba(122, 143, 255, 1);
+$verd: rgba(68, 185, 222, 1);
+$groc: rgba(255, 169, 142, 1);
+$vermell: rgba(255, 115, 115, 1);
+$gris: rgb(197, 197, 197);
+@import "layout";
+@import "contact"
+;@import "logo";
+@import "projects";
+@import "show";
+@import "skills";
+@import "about-me";
+@import "scroll-bar";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+
+
+
+
+.vertical-text > h2 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(-180deg);
+  margin: 1px -7px auto;
+}
+.horizontal-text > h2 {
+  min-width: max-content;
+  margin: -7px auto;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 900;
+  -ms-flex-item-align: end;
+  padding: 10px;
+}
+
+.h-container { //WHAT IS IT
+  background-color: transparent;
+  width:max-content;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+  .vertical-text > h2 {
+    writing-mode:horizontal-tb;
+    //text-orientation: mixed;
+    transform: rotate(0deg);
+   }
+   body {
+    overflow: scroll;
+
+  }
+}
+
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+
+
+
+
+
+
+
+
+// LOGO
+
+
+
+
+
+#landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%
+}
+
+@media screen and (max-width: 600px) {
+  #landing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.box-shadow {
+  box-shadow: 3px 2px black;
+  border: 1px solid black
+}

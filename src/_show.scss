@@ -1,0 +1,78 @@
+.show-layout {
+  width: 0%;
+  overflow: hidden;
+  border-radius: $pixels-value;
+  margin: $pixels-value $pixels-value $pixels-value 0px;
+  background-color: white;
+  max-height: 98vh; //this is wrong practice
+  // margin: $pixels-value calc(0 - $pixels-value) $pixels-value $pixels-value;
+  >h3{font-size: 1.8em; padding: 0.2em 0.5em;}
+}
+
+.show-layout-phone {
+  display: none;
+}
+
+
+.show-image {
+  background-color: grey;
+  height: 50%;
+  position: relative;
+  opacity: 1;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('./images/me.png');
+}
+
+
+.show-text {
+  height: 40%; //bad practice
+  overflow-y: scroll;
+  padding: 1em;
+  border-left: 1px solid black;
+  .text {max-width: 66ch;}
+}
+#show-links-table {
+  width: 100%;
+  table, th, td {
+    border:1px solid black;
+  }
+}
+
+.show-hide-button {
+  position: absolute;
+  background-color: black;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 1em;
+  font-size: 20px;
+  a{
+    color: white;
+    position: absolute;
+    top: -4px;
+    left: 8px;
+    font-size: 1.4em;
+
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+  .show-layout-phone {
+    background-color: blue;
+    margin-bottom: $pixels-value;
+    overflow: hidden;
+    display: block;
+
+  }
+  .show-layout {
+    display: none;
+      }
+}
