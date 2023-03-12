@@ -1,6 +1,6 @@
 
 //add an event listener thats set .project-show-mobile display:none when screensize is superor to 450 and display block when inferior
-import { projectsResponsiveness } from './projectsSection.js'
+import { projectsResponsiveness } from './sectionProjects.js'
 import { projects } from '../database/projectsDatabase.js'
 import { logoResponds } from '../Portfolio.js'
 import { layoutRespond} from '../functions/cardsLayout.js'

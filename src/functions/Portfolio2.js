@@ -1,6 +1,6 @@
 import './Stylesheet.scss';
 import { displayShowLayout, hydeShowLayout, showContent, hydeContent } from './functions/showLayout.js'
-import { projectsExpand, projectsRespond } from './functions/projectsSection.js'
+import { projectsExpand, projectsRespond } from './functions/sectionProjects.js'
 import { setGridStyles } from './functions/cardsLayout.js'
 import { projects } from './database/projectsDatabase.js'
 
@@ -23,7 +23,7 @@ function Cards() {
 
 
   function aboutMeExpand() {
-    setGridStyles("12fr 4fr 0fr", "14fr 2fr 0fr");
+    setGridStyles("12fr 0fr 0fr", "14fr 0fr 0fr");
     showContent("about-me");
     if (window.innerWidth > 450) {
       //hydeContent("projects");
@@ -58,15 +58,15 @@ function Cards() {
 
   }}
 
-  function logoClick() {
-    setGridStyles("1fr 1fr 1fr", "1fr 1fr 1fr");
+  function logoExpand() {
+    setGridStyles("1fr 0fr 1fr", "1fr 0fr 1fr");
     ["projects", "skills", "contact", "about-me"].forEach(section => showContent(section)); //pass function showContent() to each value
   }
 
   //const items = ['Item 1', 'Item 2', 'Item 3', 'Project 4 title is so long', 'project5', 'project6', 'Item 1', 'Item 2', 'Item 3', 'Project 4 title is so long', 'project5', 'project6'];
   return (
   <div className="cards">
-    <div section="logo" style={{gridArea: 'logo'}} onClick={logoClick}>LOGO</div>
+    <div section="logo" style={{gridArea: 'logo'}} onClick={logoExpand}>LOGO</div>
     <Card id="about-me" section="about me" className={"card horizontal-text"} style={{gridArea: 'first'}} onClick={aboutMeExpand}>
       testing
     </Card>

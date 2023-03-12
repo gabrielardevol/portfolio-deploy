@@ -43,6 +43,16 @@ $second-column-border: 1px solid black;
   min-height: 2.3em;
 }
 
+.smaller-card { //probably useless
+  background-color: white;
+  border-radius: $pixels-value;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  overflow: hidden;
+  min-width: 2.3em;
+  min-height: 2.3em;
+}
+
 .card-second-column {
  // border-left: $second-column-border;
   border-radius: 0px $pixels-value $pixels-value 0px;
@@ -68,8 +78,8 @@ $second-column-border: 1px solid black;
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0fr 1fr;
+  grid-template-rows: 1fr 0fr 1fr;
   grid-template-areas:
     "first first second"
     "fourth logo second"
